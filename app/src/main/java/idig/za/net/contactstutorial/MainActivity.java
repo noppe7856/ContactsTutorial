@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -37,8 +36,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String message = "in onCreate";
-//        Log.i(TAG, message);
         textView = (TextView) findViewById(R.id.textViewMainActivity);
         imageView = (ImageView) findViewById(R.id.imageView);
         mySharedPreferences = getSharedPreferences(MY_PREFERENCE_FILE, MODE_PRIVATE);
@@ -58,8 +55,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        String message = "in onPause";
-//        Log.i(TAG, message);
         if (myAlertDialog.isShowing()) {
             myAlertDialog.dismiss();
             isDialogShowing = true;
@@ -74,8 +69,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        String message = "in onResume";
-//        Log.i(TAG, message);
         mySharedPreferences = getSharedPreferences(MY_PREFERENCE_FILE, MODE_PRIVATE);
         boolean isDialogShowing = mySharedPreferences.getBoolean("isDialogShowing", false);
         if (isDialogShowing) {
@@ -95,8 +88,6 @@ public class MainActivity extends ActionBarActivity {
         switch (item.getItemId()) {
             case R.id.menuAddContact:
                 Toast.makeText(this, "Add Contact", Toast.LENGTH_SHORT).show();
-                Intent intentAddContact = new Intent(this, AddContactActivity.class);
-                startActivity(intentAddContact);
                 return true;
             case R.id.menuDeleteContact:
                 Toast.makeText(this, "Delete Contact", Toast.LENGTH_SHORT).show();
@@ -115,21 +106,9 @@ public class MainActivity extends ActionBarActivity {
                 return true;
             case R.id.menuMenu:
                 Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
-                Intent intentGoMenuActivity = new Intent(this, AppMenuActivity.class);
-                startActivity(intentGoMenuActivity);
                 return true;
             case R.id.menuBrowser:
-                Uri webAddress = Uri.parse("http://www.101apps.co.za");
-                Intent intentBrowser = new Intent(Intent.ACTION_VIEW, webAddress);
-                if (intentBrowser.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intentBrowser);
-                } else {
-                    Toast.makeText(this, "No Browser found", Toast.LENGTH_SHORT).show();
-                }
                 return true;
-            case R.id.menuEbook:
-                Intent intent = new Intent(this, NewBookActivity.class);
-                startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -193,28 +172,20 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        String message = "in onStart";
-//        Log.i(TAG, message);
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        String message = "in onRestart";
-//        Log.i(TAG, message);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        String message = "in onStop";
-//        Log.i(TAG, message);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        String message = "in onDestroy";
-//        Log.i(TAG, message);
     }
 }
