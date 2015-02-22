@@ -4,10 +4,10 @@
                 android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
         <ImageView
             android:id="@+id/imageViewContact"
@@ -15,7 +15,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/displayContactImageDescription"
-            android:src="@drawable/image_placeholder"/>
+            android:src="@drawable/image_placeholder"
+            />
 
         <TextView
             android:id="@+id/textViewName"
@@ -25,7 +26,8 @@
             android:layout_marginTop="@dimen/displayContactTopMargin"
             android:hint="@string/displayContactNameHint"
             android:padding="@dimen/displayContactPadding"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
         <TextView
             android:id="@+id/textViewEmail"
@@ -34,24 +36,26 @@
             android:layout_gravity="start"
             android:hint="@string/displayContactEmailHint"
             android:padding="@dimen/displayContactPadding"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
         <TextView
             android:id="@+id/textViewPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:hint="@string/displayContactPhoneHint"
+            android:hint="@string/contactPhoneHint"
             android:padding="@dimen/displayContactPadding"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
 
         <Button
             android:id="@+id/buttonDelete"
             style="@style/myDeleteButtonTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
             android:onClick="deleteContact"
+            android:background="@android:color/transparent"
             android:text="@string/deleteContactButtonLabel"
             android:visibility="gone"
             />

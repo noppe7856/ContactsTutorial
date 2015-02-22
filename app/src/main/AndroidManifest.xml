@@ -18,12 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListContactsActivity"></activity>
-        <activity android:name=".AppMenuActivity"></activity>
         <activity android:name=".DisplayContactsActivity"></activity>
-        <activity android:name=".AddContactActivity"></activity>
-        <activity
-            android:name=".NewBookActivity"
-            android:screenOrientation="portrait"></activity>
 
     </application>
 
