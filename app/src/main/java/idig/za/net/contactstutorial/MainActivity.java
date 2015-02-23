@@ -22,7 +22,7 @@ import java.io.InputStream;
  * www.101apps.co.za
  */
 public class MainActivity extends ActionBarActivity {
-//    private static final String TAG = "contacts";
+    //    private static final String TAG = "contacts";
     private AlertDialog myAlertDialog;
     private TextView textView;
     private ImageView imageView;

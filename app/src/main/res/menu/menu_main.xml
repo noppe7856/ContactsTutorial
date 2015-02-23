@@ -3,29 +3,29 @@
     <item
         android:id="@+id/menuAddContact"
         android:orderInCategory="1"
-        android:title="@string/menuAddContact"/>
+        android:title="@string/menuAddContact" />
     <item
         android:id="@+id/menuDeleteContact"
         android:orderInCategory="2"
-        android:title="@string/menuDeleteContact"/>
+        android:title="@string/menuDeleteContact" />
     <item
         android:id="@+id/menuViewContact"
         android:orderInCategory="3"
-        android:title="@string/menuViewContact"/>
+        android:title="@string/menuViewContact" />
     <item
         android:id="@+id/menuDialog"
         android:orderInCategory="4"
-        android:title="@string/menuShowDialog"/>
+        android:title="@string/menuShowDialog" />
     <item
         android:id="@+id/menuMenu"
         android:orderInCategory="5"
-        android:title="@string/menuMenu"/>
+        android:title="@string/menuMenu" />
     <item
         android:id="@+id/menuBrowser"
         android:orderInCategory="6"
-        android:title="@string/menuBrowser"/>
+        android:title="@string/menuBrowser" />
     <item
         android:id="@+id/menuEbook"
         android:orderInCategory="7"
-        android:title="@string/menuEbook"/>
+        android:title="@string/menuEbook" />
 </menu>

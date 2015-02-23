@@ -3,6 +3,5 @@
     <item
         android:id="@+id/menuHome"
         android:orderInCategory="1"
-        android:title="@string/menuHome"
-        />
+        android:title="@string/menuHome" />
 </menu>

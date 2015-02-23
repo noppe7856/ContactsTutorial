@@ -1,11 +1,15 @@
 package idig.za.net.contactstutorial;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by noppe on 2015/02/22.
@@ -38,6 +42,16 @@ public class DisplayContactsActivity extends Activity {
         textViewEmail.setText(contactEmail);
         textViewPhone.setText(contactPhone);
 
+        boolean showDeleteButton = getIntent().getBooleanExtra("showButton", false);
+        if (showDeleteButton) {
+            Button deleteButton = (Button) findViewById(R.id.buttonDelete);
+            deleteButton.setVisibility(View.VISIBLE);
+        }
+    }
 
+    public void deleteContact(View view) {
+        Toast.makeText(this, "Contact deleted", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, AppMenuActivity.class);
+        startActivity(intent);
     }
 }
