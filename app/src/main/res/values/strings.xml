@@ -40,5 +40,9 @@
     <string name="myNewString">My new string</string>
     <string name="ebook_info">Tell me more</string>
     <string name="menuEbook">Get the eBook</string>
+    <string name="title_activity_add_contact">AddContactActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
