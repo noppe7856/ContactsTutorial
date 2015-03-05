@@ -31,40 +31,47 @@
                 android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
-                android:clickable="false"
-                android:baselineAligned="false"
                 android:layout_weight="1">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Text"
-                    android:id="@+id/textView" />
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/contactNameLabel"
+                    android:id="@+id/textViewName" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="2">
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/moccasin"
+                android:gravity="center_horizontal"
+                >
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
+                    android:inputType="textPersonName|textCapSentences"
                     android:ems="10"
-                    android:id="@+id/editText" />
+                    android:id="@+id/editTextName"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/contactNameHint"
+                    android:padding="@dimen/padding_5dp"
+                    android:textSize="@dimen/textSizeMedium"
+
+                    />
+                <requestFocus/>
             </LinearLayout>
         </LinearLayout>
-
+<!--email line-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_2dp"
             android:orientation="horizontal"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
             android:id="@+id/linerLayoutEmailLine">
 
             <LinearLayout
@@ -74,35 +81,45 @@
                 android:layout_weight="1">
 
                 <TextView
+                    android:id="@+id/textViewEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:id="@+id/textView2"
-                    android:autoText="false"
-                    android:elegantTextHeight="false" />
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/contactEmailLabel"
+                    android:textSize="@dimen/textSizeMedium"
+                    />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="2">
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/moccasin"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                >
 
                 <EditText
+                    android:id="@+id/editTextEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/contactEmailHint"
+                    android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
-                    android:ems="10"
-                    android:id="@+id/editText2" />
+                    android:padding="@dimen/padding_5dp"
+                    android:textSize="@dimen/textSizeMedium"
+                    />
             </LinearLayout>
         </LinearLayout>
-
+        <!-- phone line -->
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linerLayoutPhoneLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:padding="@dimen/padding_2dp"
-            android:id="@+id/linerLayoutPhoneLine"
             >
 
             <LinearLayout
@@ -113,82 +130,111 @@
                 >
 
                 <TextView
+                    android:id="@+id/textViewPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phone"
-                    android:id="@+id/textView3" />
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/contactPhoneLabel"
+                    android:textSize="@dimen/textSizeMedium"
+                    />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:background="@color/moccasin"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
                 >
 
                 <EditText
+                    android:id="@+id/editTextPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/contactPhoneHint"
+                    android:imeOptions="actionDone"
                     android:inputType="phone"
-                    android:ems="10"
-                    android:id="@+id/editText3" />
+                    android:padding="@dimen/padding_5dp"
+                    android:textSize="@dimen/textSizeMedium"
+                    />
             </LinearLayout>
         </LinearLayout>
+        <!-- sex line -->
 
         <LinearLayout
             android:id="@+id/linerLayoutSexLine"
             android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_2dp"
+            >
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent">
+                android:layout_height="match_parent"
+                >
 
                 <TextView
+                    android:id="@+id/textViewSex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Text"
-                    android:id="@+id/textView4" />
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/radioGroupLabel"
+                    android:textSize="@dimen/textSizeMedium"
+                    />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_weight="2"
-                android:layout_width="0"
-                android:layout_height="fill_parent">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
 
                 <RadioGroup
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
 
                     <RadioButton
+                        android:id="@+id/radioButtonMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New RadioButton"
-                        android:id="@+id/radioButton" />
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/radioLabelMale"
+                        />
 
                     <RadioButton
+                        android:id="@+id/radioButton2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New RadioButton"
-                        android:id="@+id/radioButton2" />
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/radioLabelFemale"
+                        />
                 </RadioGroup>
             </LinearLayout>
         </LinearLayout>
-
+        <!-- button -->
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            >
 
             <Button
+                android:id="@+id/button"
+                style="@style/myAddButtonTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button" />
+                android:background="@android:color/transparent"
+                android:onClick="saveContact"
+                android:text="@string/saveContactButtonLabel"
+                />
         </LinearLayout>
     </LinearLayout>
 

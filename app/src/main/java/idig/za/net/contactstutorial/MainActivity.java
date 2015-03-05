@@ -88,6 +88,8 @@ public class MainActivity extends ActionBarActivity {
         switch (item.getItemId()) {
             case R.id.menuAddContact:
                 Toast.makeText(this, "Add Contact", Toast.LENGTH_SHORT).show();
+                Intent intentAddContact = new Intent(this, AddContactActivity.class);
+                startActivity(intentAddContact);
                 return true;
             case R.id.menuDeleteContact:
                 Toast.makeText(this, "Delete Contact", Toast.LENGTH_SHORT).show();
