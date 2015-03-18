@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -108,8 +109,17 @@ public class MainActivity extends ActionBarActivity {
                 return true;
             case R.id.menuMenu:
                 Toast.makeText(this, "Menu", Toast.LENGTH_SHORT).show();
+                Intent intentGoMenuActivity = new Intent(this, AppMenuActivity.class);
+                startActivity(intentGoMenuActivity);
                 return true;
             case R.id.menuBrowser:
+                Uri webAddress = Uri.parse("http://www.101apps.co.za");
+                Intent intentBrowser = new Intent(Intent.ACTION_VIEW, webAddress);
+                if (intentBrowser.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intentBrowser);
+                } else {
+                    Toast.makeText(this, "No Browser found", Toast.LENGTH_SHORT).show();
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);

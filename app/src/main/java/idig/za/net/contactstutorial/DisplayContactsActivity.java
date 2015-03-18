@@ -14,7 +14,7 @@ import android.widget.Toast;
 /**
  * Created by noppe on 2015/02/22.
  */
-public class DisplayContactsActivity extends Activity {
+public class DisplayContactsActivity extends MyMenuActivityClass{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
